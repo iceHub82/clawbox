@@ -64,21 +64,41 @@ Once complete, your browser opens to the OpenClaw chat UI — you're ready to go
 
 ## Security
 
-Setup runs in **hardened mode by default**:
+> **Running an AI agent on your local machine carries real risk.** The agent can execute shell commands, read/write files, and access your network. Clawbox takes this seriously and ships **hardened by default** — every layer is locked down out of the box.
+
+### What hardened mode does
+
+| Layer | Protection | Why it matters |
+|---|---|---|
+| **Network isolation** | Gateway bound to `localhost` only | No one on your network can access the agent |
+| **Exec approvals** | Agent must ask before running any command | You review and approve every shell command |
+| **Sandbox** | Agent tools run in isolated Docker containers | Commands can't touch your host filesystem |
+| **Internal SearXNG** | Search engine not exposed to host | Only the agent can reach it, not your browser or LAN |
+| **Auth token** | Gateway requires a token to connect | Prevents unauthorized access even on localhost |
+| **Docker isolation** | Everything runs inside containers | Nothing is installed on your host system |
+
+### Hardened vs Open mode
 
 | Setting | Hardened (default) | Open (`--open`) |
 |---|---|---|
 | Port binding | localhost only | LAN-accessible |
-| Exec approvals | Agent must ask before running commands | Off |
-| Sandbox | Agent tools run in isolated containers | Off |
-| SearXNG | Internal only (not exposed to host) | Exposed on host |
+| Exec approvals | Required — you approve every command | Off |
+| Sandbox | Enabled — isolated containers | Off |
+| SearXNG | Internal only | Exposed on host |
 
-To disable hardening (e.g., to access from other devices on your network):
+**We strongly recommend running in hardened mode** unless you specifically need LAN access. To disable hardening:
 
 ```bash
 ./setup.sh --open          # macOS / Linux
 .\setup.ps1 -Open          # Windows
 ```
+
+### Security tips
+
+- **Never run `--open` on an untrusted network** — it exposes the agent to your entire LAN
+- **Review exec approvals carefully** — the agent will show you the command before running it
+- **Keep Docker Desktop updated** — container isolation depends on it
+- **Don't store sensitive files in the workspace directory** — the agent has full access to it
 
 ## Architecture
 

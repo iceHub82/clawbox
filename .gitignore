@@ -1,0 +1,14 @@
+# Credentials and environment
+.env
+*.key
+*.pem
+
+# Runtime data
+data/
+
+# macOS
+.DS_Store
+
+# SearXNG runtime files (keep settings.yml)
+searxng/uwsgi.ini
+searxng/limiter.toml

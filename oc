@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# Shorthand for openclaw-cli commands.
+set -euo pipefail
+cd "$(dirname "$0")"
+
+GATEWAY_CONTAINER="clawbox-openclaw-gateway-1"
+
+case "${1:-}" in
+  token)
+    docker exec "$GATEWAY_CONTAINER" node -e "
+      const c = JSON.parse(require('fs').readFileSync('/home/node/.openclaw/openclaw.json','utf8'));
+      console.log(c?.gateway?.auth?.token || 'No token found');
+    "
+    ;;
+  *)
+    exec docker compose run --rm openclaw-cli "$@"
+    ;;
+esac

@@ -1,6 +1,11 @@
-# Clawbox
+<p align="center">
+  <img src="docs/images/banner.png" alt="Clawbox" width="700"/>
+</p>
 
-One-command setup for [OpenClaw](https://github.com/openclaw/openclaw) — a self-hosted AI agent with built-in web search. No API keys needed for search, no complex configuration. Just clone, run, and chat.
+<p align="center">
+  <strong>One-command setup for <a href="https://github.com/openclaw/openclaw">OpenClaw</a> — a self-hosted AI agent with built-in web search.</strong><br/>
+  No API keys needed for search, no complex configuration. Just clone, run, and chat.
+</p>
 
 ## What you get
 

@@ -26,7 +26,7 @@ One-command setup for [OpenClaw](https://github.com/openclaw/openclaw) — a sel
 ### macOS / Linux
 
 ```bash
-git clone https://github.com/orvarkarlsson/clawbox.git
+git clone https://github.com/iceHub82/clawbox.git
 cd clawbox
 ./setup.sh
 ```
@@ -34,7 +34,7 @@ cd clawbox
 ### Windows (PowerShell)
 
 ```powershell
-git clone https://github.com/orvarkarlsson/clawbox.git
+git clone https://github.com/iceHub82/clawbox.git
 cd clawbox
 .\setup.ps1
 ```

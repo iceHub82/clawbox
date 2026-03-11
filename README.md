@@ -3,9 +3,24 @@
 </p>
 
 <p align="center">
-  <strong>One-command setup for <a href="https://github.com/openclaw/openclaw">OpenClaw</a> — a self-hosted AI agent with built-in web search.</strong><br/>
-  No API keys needed for search, no complex configuration. Just clone, run, and chat.
+  <strong>Run a self-hosted AI agent safely on your everyday computer.</strong><br/>
+  No VPS. No Mac Mini. No server closet. Just Docker on the laptop or desktop you already have.
 </p>
+
+<p align="center">
+  Clawbox is a hardened, one-command setup for <a href="https://github.com/openclaw/openclaw">OpenClaw</a> with built-in web search.<br/>
+  Everything runs inside Docker containers — nothing touches your host system.
+</p>
+
+---
+
+## Why Clawbox?
+
+Most AI agent setups assume you have a dedicated server or cloud VM. Clawbox is different — it's **designed to run on your personal machine** and locked down so you can do it safely:
+
+- **Nothing escapes Docker** — the agent, its tools, and the search engine all run inside containers. Your host filesystem, apps, and data stay untouched.
+- **Hardened by default** — localhost-only networking, command approval prompts, and sandboxed execution. No open ports, no surprises.
+- **Your laptop is enough** — if it runs Docker Desktop, it runs Clawbox. No need to rent a VPS or dedicate hardware.
 
 ## What you get
 

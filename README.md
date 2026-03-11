@@ -16,7 +16,7 @@
 
 ## Why Clawbox?
 
-Most AI agent setups assume you have a dedicated server or cloud VM. Clawbox is different — it's **designed to run on your personal machine** and locked down so you can do it safely:
+Most AI agent setups assume you have a dedicated server, cloud VM or a mac mini. Clawbox is different — it's **designed to run on your personal machine** and locked down so you can run it safely:
 
 - **Nothing escapes Docker** — the agent, its tools, and the search engine all run inside containers. Your host filesystem, apps, and data stay untouched.
 - **Hardened by default** — localhost-only networking, command approval prompts, and sandboxed execution. No open ports, no surprises.
